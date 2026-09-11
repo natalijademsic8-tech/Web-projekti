@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automobili</title>
+    <style>
+
+        .rollover {
+            width: 300px;
+            transition: 0.3s;
+        }
+
+        .rollover:hover {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Moji automobili</h1>
+
+
+    <img class="rollover"
+         src="auto1.jpg"
+         alt="Automobil">
+
+
+    <img class="rollover"
+         src="auto2.jpg"
+         alt="Automobil">
+
+
+    <img id="swapSlika"
+         src="auto3.jpg"
+         alt="Automobil"
+         width="300"
+         onmouseover="swapSlika()"
+         onmouseout="vratiSliku()">
+
+    <script>
+        function swapSlika() {
+            document.getElementById("swapSlika").src = "auto4.jpg";
+        }
+
+        function vratiSliku() {
+            document.getElementById("swapSlika").src = "auto3.jpg";
+        }
+    </script>
+
+</body>
+</html>
